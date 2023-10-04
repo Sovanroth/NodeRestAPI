@@ -1,7 +1,6 @@
 import crypto from "crypto";
 
 const SECRET = "SOVANROTH-REST-API";
-
 export const authentication = (salt: string, password: string): string => {
   return crypto
     .createHmac("sha256", [salt, password].join("/"))
